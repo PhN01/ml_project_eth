@@ -1,0 +1,12 @@
+*.gz
+*.tar
+*.npy
+__pycache__/
+.kaggle-cli/
+data/
+.config.yaml\n.smt/
+\n.smt/
+\n.smt/
+\n.smt/
+*.ipynb\n.smt/
+**/.DS_Store

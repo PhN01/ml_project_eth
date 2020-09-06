@@ -1,0 +1,67 @@
+##############################################################################
+# 1. Age regression
+##############################################################################
+
+# Training
+#module: ml_project.pipeline
+#class: Pipeline
+#params:
+#  class_list:
+#    - module: ml_project.models.preprocessing
+#      class: CropVoxelFrame
+#    - module: ml_project.models.feature_extraction
+#      class: CannyEdgeFeatures
+#    - module: ml_project.models.preprocessing
+#      class: DownsizeVoxel
+#    - module: ml_project.models.preprocessing
+#      class: FlattenVoxel
+#    - module: ml_project.models.regression
+#      class: OptimRidgeCV
+
+# Prediction
+# module: ml_project.models.regression
+# class: OptimRidgeCV
+
+
+##############################################################################
+# 2. Dementia classification
+##############################################################################
+
+# Training
+#module: ml_project.pipeline
+#class: Pipeline
+#params:
+#  class_list:
+#    - module: ml_project.models.preprocessing
+#      class: CropVoxelFrame
+#    - module: ml_project.models.feature_extraction
+#      class: CubeHistFeatures
+#    - module: ml_project.models.classification
+#      class: SVClassifier
+
+# Prediction
+# module: ml_project.models.classification
+# class: SVClassifier
+
+
+##############################################################################
+# 3. ECG classification
+##############################################################################
+
+# Training
+#module: ml_project.pipeline
+#class: Pipeline
+#params:
+#  class_list:
+#    - module: ml_project.models.preprocessing
+#      class: CutSignal
+#    - module: ml_project.models.preprocessing
+#      class: ECGCollect
+#    - module: ml_project.models.feature_extraction
+#      class: ECGFeatures
+#    - module: ml_project.models.classification
+#      class: GBClassifier
+
+# Prediction
+# module: ml_project.models.classification
+# class: GBClassifier
